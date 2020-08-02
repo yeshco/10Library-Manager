@@ -1,0 +1,24 @@
+{
+  "name": "10library-manager",
+  "version": "1.0.0",
+  "description": "SQL app for TeamTreehouse",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SQL"
+  ],
+  "author": "YC",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0",
+    "sequelize": "^6.3.0",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}

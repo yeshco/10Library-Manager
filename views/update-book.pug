@@ -1,0 +1,23 @@
+extends ./layout
+
+block content
+    h1 Update Book
+    form(action=`/books/${params.id}` method="post")
+        - var vals = ["title", "author", "genre", "year"];
+        //- - var titleID = params.id.replace(/-/g, " ")
+        //- - var ID;
+        //- - for (var i = 0; i < data.length; i++) { if (data[i].title == titleID) {ID = i}}
+        - var tryit = function () { alert('will work')};
+
+        each val in vals
+            p
+                label(for=val)= val.charAt(0).toUpperCase() + val.slice(1)
+                input(name=val type="text" id=val value=data[val])
+        p
+            input(type="submit", value="Update Book")
+
+    form(action=`/books/${params.id}/delete` method="post" onsubmit= 'alert("This book will be deleted!")')
+        p
+            a(href="/" class="button") Cancel
+        p
+            input(type="submit", value="Delete Book")

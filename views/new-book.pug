@@ -1,0 +1,20 @@
+extends ./layout
+
+block content
+    h1 New Book
+    form(action="/books/new" method="post")
+        if(errors)
+            h2.error Oops an error occurred!
+            ul.error
+            each error in errors
+                li
+                    =error.message
+        - var vals = ["title", "author", "genre", "year"];
+        each val in vals
+            p
+                label(for=val)= val.charAt(0).toUpperCase() + val.slice(1)
+                input(name=val type="text" id=val value= errors ? data[val] : null)
+        p
+            input(type="submit" value="Create New Book")
+        p
+            a(href="/" class="button") Cancel
