@@ -49,7 +49,7 @@ function allBooks(app) {
       // GET route for setting new books -->
       // It renders the empty view
       app.get('/books/new', (req, res) => {
-        res.render('new-Book', {theTitle: 'New Book'})
+        res.render('new-book', {theTitle: 'New Book'})
       })
 
       // POST route for posting new books -->
